@@ -30,7 +30,7 @@ Dashboard operasional untuk menangani Work Order, Ticket, Progress, dan Assignme
 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/username/sirs.git
+git clone https://github.com/lutfifahri/teknoservis.git
 cd teknoservis`
 ```
 
@@ -156,77 +156,3 @@ APP_DEBUG=true
 # Structure Database
 
 ![alt text](db.png)
-
-# Struktur Laravel Project
-
-app
-├── Http
-│ └── Controllers
-│ └── DashboardController.php
-│
-├── Livewire
-│ └── Dashboard
-│ ├── WorkOrderTable.php
-│ ├── WorkOrderEditModal.php
-│ ├── TicketAssignModal.php
-│ └── WorkOrderProgressModal.php
-│
-└── Models
-├── WorkOrder.php
-├── WorkOrderProgress.php
-├── Ticket.php
-├── TicketLog.php
-├── Technician.php
-├── TicketAssignment.php
-└── Region.php
-
-## 📂 resources/views
-
-resources/views
-├── layouts
-│ └── app.blade.php
-│
-├── dashboard
-│ └── index.blade.php
-│
-└── livewire
-└── dashboard
-├── work-order-table.blade.php
-├── work-order-edit-modal.blade.php
-├── ticket-assign-modal.blade.php
-└── work-order-progress-modal.blade.php
-
-## 📂 database/
-
-database
-├── migrations
-│ ├── create_regions_table.php
-│ ├── create_work_orders_table.php
-│ ├── create_work_order_progresses_table.php
-│ ├── create_tickets_table.php
-│ ├── create_ticket_logs_table.php
-│ ├── create_technicians_table.php
-│ └── create_ticket_assignments_table.php
-│
-└── seeders
-├── DatabaseSeeder.php
-├── RegionSeeder.php
-├── TechnicianSeeder.php
-├── WorkOrderSeeder.php
-├── WorkOrderProgressSeeder.php
-├── TicketSeeder.php
-├── TicketLogSeeder.php
-└── TicketAssignmentSeeder.php
-
-## 📂 routes
-
-Contoh isi:
-
-```bash
-# single route
-Route::get('/work-orders', WorkOrderTable::class);
-
-# multi route
-
-Route::get('/', [DashboardController::class, 'index']);
-```
