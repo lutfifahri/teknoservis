@@ -98,6 +98,42 @@ php artisan db:seed
 
 🚀 Menjalankan Aplikasi
 
+# install barryvdh/laravel-debugbar
+
+1️⃣ Install Debugbar
+
+Di root project Laravel:
+
+```bash
+composer require barryvdh/laravel-debugbar --dev
+```
+
+--dev → hanya aktif di local / development
+
+2️⃣ Pastikan APP_DEBUG = true
+
+Cek file .env:
+
+```bash
+APP_ENV=local
+APP_DEBUG=true
+```
+
+⚠️ Kalau APP_DEBUG=false → Debugbar tidak muncul
+
+3️⃣ Clear config & cache (WAJIB)
+
+Jalankan:
+
+```bash
+php artisan config:clear
+php artisan cache:clear
+php artisan view:clear
+
+```
+
+Jalankan server
+
 ```bash
 php artisan serve
 ```
